@@ -1,89 +1,36 @@
-import csv
-import json
+from classe_dados import Dados
 
-class Dados:
-    
-    def __init__(self, path, tipo_dados):
-        self.path = path
-        self.tipo_dados = tipo_dados
-        self.dados = self.leitura_dados()
-        self.nome_colunas = self.get_columns() 
-        self.qtd_linhas = self.size_data()
+# Caminho dos dados
+path_csv='data_raw/dados_empresaB.csv'
+path_json ='data_raw/dados_empresaA.json'
 
-    def leitura_json(self):
+# Extract
+dados_empresaA = Dados(path_json, 'json')
+print(f"O arquivo primeiro arquivo carregado possui {dados_empresaA.qtd_linhas} linhas")
 
-        dados_json = []
-        with open(self.path, 'r') as file:
-            dados_json = json.load(file)
-        return dados_json
+dados_empresaB = Dados(path_csv, 'csv')
+print(f"O arquivo segundo arquivo carregado possui {dados_empresaB.qtd_linhas} linhas")
 
-    def leitura_csv(self):
+# Transform
 
-        dados_csv = []
-        with open(self.path, 'r') as file:
-            spamreader = csv.DictReader(file, delimiter=',')
-            for row in spamreader:
-                dados_csv.append(row)
-        
-        return dados_csv
+key_mapping = { 'Nome do Item':'Nome do Produto',
+                'Classificação do Produto':'Categoria do Produto',
+                'Valor em Reais (R$)': 'Preço do Produto (R$)',
+                'Quantidade em Estoque': 'Quantidade em Estoque',
+                'Nome da Loja': 'Filial',
+                'Data da Venda':'Data da Venda'}
 
-    def leitura_dados(self):
-        
-        
-        dados = []
-        if self.tipo_dados == 'csv':
-            dados = self.leitura_csv()
 
-        elif self.tipo_dados == 'json':
-            dados = self.leitura_json()
+dados_empresaB.rename_columns(key_mapping)
+print(f"A coluna dos arquivos foram renomeadas para: {dados_empresaB.nome_colunas}")
 
-        elif self.tipo_dados == 'list':
-            dados = self.path
-            self.path = 'lista em memoria'
+dados_fusao = Dados.join(dados_empresaA,dados_empresaB)
+# print(dados_fusao)
+print(f"A nova base de dados possui as seguintes colunas: {dados_fusao.nome_colunas}")
+print(f"A nova base de dados possui {dados_fusao.qtd_linhas} linhas")
 
-        return dados
-    
-    def get_columns(self):
-        return list(self.dados[-1].keys())
-    
-    def rename_columns (self, key_mapping):
-        new_dados = []
+# Load
+path_dados_combinados = 'data_processed/dados_combinados.csv'
+dados_fusao.salvando_dados(path_dados_combinados)
+print(f"Seu arquivo csv está disponíel em: {path_dados_combinados}")
 
-        for old_dict in self.dados:
-            dict_temp = {}
-            for old_key, value in old_dict.items():
-                dict_temp[key_mapping[old_key]] = value
-            new_dados.append(dict_temp)
-        
-        self.dados = new_dados
-        self.nome_colunas = self.get_columns() 
-
-    def size_data(self):
-        return len(self.dados)
-
-    def join(dadosA,dadosB):
-        combined_list = []
-        combined_list.extend(dadosA.dados)
-        combined_list.extend(dadosB.dados)
-        return Dados(combined_list, 'list')
-    
-
-    def transformando_dados_tabela(self):
-
-        dados_combinados_tabela = [self.nome_colunas]
-
-        for row in self.dados:
-            linha = []
-            for coluna in self.nome_colunas:
-                linha.append(row.get(coluna,'Indisponivel'))
-            dados_combinados_tabela.append(linha)
-
-        return dados_combinados_tabela
-      
-    def salvando_dados(self,path):
-
-        dados_combinados_tabela = self.transformando_dados_tabela()
-
-        with open(path, 'w') as file:
-            writer = csv.writer(file)
-            writer.writerows(dados_combinados_tabela)
