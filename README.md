@@ -89,10 +89,10 @@ Após a execução do pipeline ETL, os dados processados são salvos em `data_pr
 
 ## Acesse o Projeto
 
-- Você pode acessar a documentação da classe dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/classe_dados.md).
+- Você pode acessar a documentação da classe dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/classe_dados.py).
 - Você pode acessar o script da classe dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.py)
-- Você pode acessar a documentação do processamento de dados clicando [aqui]().
-- Você pode acessar o script do processamento de dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/fusao_mercado_fev.py).
+- Você pode acessar a documentação do processamento de dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.md).
+- Você pode acessar o script do processamento de dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.py).
 
 ## Autor
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136928502?s=96&v=4" width=115><br><sub>Frederico Sander</sub>](https://github.com/FredericoSander)
