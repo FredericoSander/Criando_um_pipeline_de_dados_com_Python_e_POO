@@ -1,19 +1,20 @@
 # Documentação do Projeto de Processamento de Dados
 
-## Descrição
-Este projeto tem como objetivo realizar o processo de ETL (Extração, Transformação e Carregamento) de dados provenientes de arquivos JSON e CSV. Os dados de duas empresas distintas são unificados, padronizados e salvos em um novo arquivo CSV para futuras análises.
-
 ## Índice 
 
-* [Descrição](#descrição)
 * [Índice](#índice)
+* [Descrição](#descrição)
 * [Tecnologia Utiliadas](#tecnologias-utiliazdas)
 * [Estrutura do Projeto](#estrutura-do-projeto)
 * [Preparando o Ambiente](#preparando-o-ambiente)
 * [Funcionalidades Principais](#funcionalidades-principais)
 * [Fluxo do Processo ETL](#fluxo-do-processo-etl)
 * [Resultado Final](#resultado-final)
-* [Acesse o Projeto](#acesse-o-projeto)
+* [Acesse o Projeto](#acesse-o-projeto)## Índice 
+
+
+## Descrição
+Este projeto tem como objetivo realizar o processo de ETL (Extração, Transformação e Carregamento) de dados provenientes de arquivos JSON e CSV. Os dados de duas empresas distintas são unificados, padronizados e salvos em um novo arquivo CSV para futuras análises.
 
 ## Tecnologias Utilizadas
 
@@ -93,6 +94,7 @@ Após a execução do pipeline ETL, os dados processados são salvos em `data_pr
 - Você pode acessar o script da classe dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.py)
 - Você pode acessar a documentação do processamento de dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.md).
 - Você pode acessar o script do processamento de dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.py).
+
 
 ## Autor
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136928502?s=96&v=4" width=115><br><sub>Frederico Sander</sub>](https://github.com/FredericoSander)

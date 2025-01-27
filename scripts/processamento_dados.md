@@ -1,5 +1,14 @@
 # Documentação do Script de Processamento de Dados
 
+## Índice 
+
+* [Índice](#índice)
+* [Descrição](#descrição)
+* [Dependências](#dependências)
+* [Etapas do Processo](#etapas-do-processo)
+* [Resultado Final](#resultado-final)
+* [Acesse o Projeto](#acesse-o-projeto)
+
 ## Descrição
 Este script realiza a extração, transformação e carregamento de dados (ETL) de arquivos nos formatos JSON e CSV. Ele combina os dados de duas empresas distintas, realiza a padronização de colunas e salva os dados processados em um novo arquivo CSV.
 
@@ -62,6 +71,9 @@ print(f"Seu arquivo CSV está disponível em: {path_dados_combinados}")
 ## Resultado Final
 Após a execução do script, um novo arquivo CSV contendo os dados combinados e padronizados estará disponível em `data_processed/dados_combinados.csv`.
 
-## Autor
-- Desenvolvido por [Seu Nome]
+## Acesse o Projeto
+- Você pode acessar o script do processamento de dados clicando [aqui](https://github.com/FredericoSander/Criando_um_pipeline_de_dados_com_Python_e_POO/blob/main/scripts/processamento_dados.py).
 
+## Autor
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136928502?s=96&v=4" width=115><br><sub>Frederico Sander</sub>](https://github.com/FredericoSander)
+| :---: | 

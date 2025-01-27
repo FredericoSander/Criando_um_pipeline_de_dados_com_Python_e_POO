@@ -1,5 +1,15 @@
 # Documentação da Classe `Dados`
 
+
+## Índice 
+
+* [Índice](#índice)
+* [Introdução](#introdução)
+* [Inicialização da Classe](#inicialização-da-classe)
+* [Métodos](#métodos)
+* [Exemplo de Uso](#exemplo-de-uso)
+* [Conclusão](#conclusão)
+
 ## Introdução
 A classe `Dados` permite a manipulação de arquivos de dados nos formatos **CSV** e **JSON**, além de possibilitar a leitura de listas diretamente da memória.
 Com esta classe, é possível carregar, renomear colunas, unir conjuntos de dados e exportar as informações processadas para um novo arquivo CSV.
@@ -101,4 +111,8 @@ meus_dados.salvando_dados("novo_dados.csv")
 
 ## Conclusão
 A classe `Dados` é uma ferramenta poderosa para manipulação de arquivos CSV e JSON, permitindo leitura, transformação e exportação dos dados de maneira eficiente. É uma solução ideal para projetos que envolvem engenharia de dados e análise de informações.
+
+## Autor
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136928502?s=96&v=4" width=115><br><sub>Frederico Sander</sub>](https://github.com/FredericoSander)
+| :---: | 
 
