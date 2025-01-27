@@ -10,7 +10,7 @@
 * [Funcionalidades Principais](#funcionalidades-principais)
 * [Fluxo do Processo ETL](#fluxo-do-processo-etl)
 * [Resultado Final](#resultado-final)
-* [Acesse o Projeto](#acesse-o-projeto)## Índice 
+* [Acesse o Projeto](#acesse-o-projeto)
 
 
 ## Descrição
